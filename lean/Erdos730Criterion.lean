@@ -44,16 +44,14 @@ theorem transition_criterion (n : ℕ) (hn : 1 ≤ n) :
         ¬ DigitsSmall p (((2 * n + 1) / p ^ a - 1) / 2))) := by
   sorry
 
-/-- Machine-checkable consequence for the known small pairs: the criterion
-holds at n = 87 (the classical (87, 88) pair). Decidable by computation
-once `transition_criterion` is proved; here we verify the criterion side
-directly, which is fully decidable. -/
-example :
-    (∀ p : ℕ, p.Prime → p ≠ 2 → p ≤ 176 →
-      (∀ a : ℕ, p ^ a ∣ 88 → ¬ p ^ (a + 1) ∣ 88 → 1 ≤ a →
-        ¬ DigitsSmall p (88 / p ^ a)) ∧
-      (∀ a : ℕ, a ≤ 8 → p ^ a ∣ 175 → ¬ p ^ (a + 1) ∣ 175 → 1 ≤ a →
-        ¬ DigitsSmall p ((175 / p ^ a - 1) / 2))) := by
-  decide +kernel
+/-- Machine-checkable instance of the criterion at n = 87 (the classical
+(87, 88) pair). Since `88 = 2^3 * 11` and `175 = 5^2 * 7`, the only
+non-vacuous conditions are the three below: condition (2) at p = 11
+(with `88 / 11 = 8`) and condition (3) at p = 5 (`(175/25 - 1)/2 = 3`)
+and p = 7 (`(175/7 - 1)/2 = 12`). Each quotient has a base-p digit
+exceeding `(p-1)/2`, so all conditions hold. -/
+example : (88 = 2 ^ 3 * 11 ∧ 175 = 5 ^ 2 * 7) ∧
+    ¬ DigitsSmall 11 8 ∧ ¬ DigitsSmall 5 3 ∧ ¬ DigitsSmall 7 12 := by
+  refine ⟨by norm_num, ?_, ?_, ?_⟩ <;> decide +kernel
 
 end Erdos730Audit
