@@ -67,7 +67,9 @@ def main():
             count1 += 1
             runlen = runlen + 1 if prev else 1
             if runlen >= 2:
-                msg = f"RUN length {runlen + 1}: ends n={n} (starts {n - runlen})"
+                # runlen consecutive k1-true indices ending at n cover the
+                # values n - runlen + 1 .. n + 1  (runlen + 1 values)
+                msg = f"RUN length {runlen + 1}: values {n - runlen + 1}..{n + 1}"
                 print(msg, flush=True)
                 out.write(msg + "\n")
                 out.flush()

@@ -112,6 +112,16 @@ toolchain applies).
   ~180 triples (ONLY ONE previously known: 10003); ZERO quadruples —
   consistent with quasi-independence (expected λ ≈ 2, P(none) ≈ 14%).
   First quadruple predicted within n ≲ 10^7–10^8.
+- Run hunt to n = 10^7 (2026-07-27): 73,760 k=1 pairs; 557 triples;
+  **FIVE QUADRUPLES** — runs of four consecutive equal-radical values at
+  n = 3894942, 4505065, 6218569, 7506679, 8879450 (starts corrected for a
+  reporting off-by-one that was caught by independent brute-force
+  verification — the flagship quadruple 3894942..3894945 is confirmed by
+  full support comparison over all odd primes ≤ 2(n+3), ~3.6×10^5 primes).
+  Hence the **first known (n, n+3) pairs**, e.g. (3894942, 3894945),
+  answering the existence part of the k = 3 question. First quintuple
+  (⟹ (n, n+4)) predicted around n ~ 10^9±1 — beyond this scanner;
+  needs optimized sieving (PARI/C or the criterion in compiled form).
 - Emerging conjecture (weak): for every L, runs of length L exist
   (density ~ ρ^{L-1} with ρ ≈ 0.01, modulated by the shared-bridge
   correlations); hence (n, n+k) pairs for every k via transitivity.
