@@ -142,16 +142,39 @@ These are FOUR SQUARES IN ARITHMETIC PROGRESSION (common difference 2α),
 impossible for α ≠ 0 by Euler–Fermat. **Hence no constant-free
 linear-splitting family can produce triples.**
 
-Escape hatch (and the reason the k=1 proof needed its 3): constant
-multipliers. With 2F−1 = h₂R₁S₁ etc., the conditions become
-D₀−4α = h₃²·□, D₀−2α = h₄²·□, D₀ = h₁²·□, D₀+2α = h₂²·□ — an AP of
-length 4 whose terms are squares times DIFFERENT fixed constants; no
-classical obstruction applies. The correct identity search is therefore:
-over small constant tuples (h₁,h₂,h₃,h₄) (odd, digit-side-safe), find
-integers (α, D₀) with all four conditions, then reconstruct β, γ and the
-eight linear forms, then impose the 730-style local conditions. This is
-Pell-system territory — finite, automatable, and now provably the ONLY
-route of this shape.
+**Correction (same evening).** A first draft claimed constant multipliers
+h relax the conditions; they do not: disc(h·R·S) = h²·(integer)² is still
+a perfect square, so all four splitting conditions are genuinely
+"perfect square" and the Euler–Fermat obstruction applies WITH OR WITHOUT
+constants. (An automated search over α ≤ 2×10⁴ with multiplier tuples
+returned zero systems — an empirical confirmation of Fermat, as it must
+be.) Hence the strengthened statement:
+
+**Lemma C′.** No 730-type construction based on a single quadratic
+F = n+1 can have all four of F, 2F−1, F+1, 2F+1 split into linear forms.
+At most THREE of the four can split, since three squares in AP with
+common difference 2α do exist (classically parametrized via
+u² + w² = 2v²), e.g. the configuration splitting F, 2F−1, 2F+1
+(conditions D₀−2α, D₀, D₀+2α squares) and leaving F+1 IRREDUCIBLE.
+
+**The real route to a triple/k=2 theorem** is therefore hybrid:
+engineer three of the four transitions' quadratics as in the 730 proof,
+and handle the leftover irreducible quadratic (n+2 = F(t)+1) by the
+ANALYTIC method — its per-prime local analysis is exactly Prop 3.3
+(restricted digits for quadratic polynomials mod p^{2r}, already proved
+for irreducible G!), with the global bookkeeping now over prime divisors
+of an irreducible quadratic's values (Chebotarev-flavored densities in
+place of linear-form Mertens). Concrete next steps:
+1. Parametrize 3-squares-in-AP triples (v² − u² = w² − v² = 2α) and
+   enumerate small (α, D₀) with the F/2F−1/2F+1 split + integrality of
+   (β, γ) + the 730 local/coprimality conditions.
+2. For surviving families, develop the first-moment count with the
+   fourth branch quadratic irreducible: the new ingredient is
+   Σ_p (obstruction density at p) over p | values of an irreducible
+   quadratic — needs the analogue of (17) with the density of
+   {p : p | F(t)+1 solvable} ~ Chebotarev 1/2-ish weights. Target:
+   total constant Λ₃ < 1. If the constant fails, enlarge the engineered
+   side (split MORE structure off F+1, e.g. force a fixed prime factor).
 
 ## Honest difficulty assessment
 
