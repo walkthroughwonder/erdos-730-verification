@@ -1,4 +1,8 @@
-# Erdős #730 audit — status after day one (2026-07-27)
+# Erdős #730 audit — finite-checks ledger
+
+*Day-one snapshot (2026-07-27), completed later the same day: every item
+in "Remaining before a verdict" below was subsequently discharged — see
+VERDICT.md for the full auditor's report. Final verdict: **CONFIRMED**.*
 
 ## Everything finitely checkable has now been verified ✓
 
@@ -21,21 +25,24 @@ x=400, n ≈ 1.35×10^16. Previous known record: n = 10,005. These are
 legitimate contributions to A129515/the 730 thread REGARDLESS of the
 paper's analytic sections.
 
-## Remaining before a verdict (the infinite parts)
+## Remaining before a verdict at the day-one snapshot — all since completed
 
-- A4a: Lemma 3.2 line-by-line (completion, the s ≡ −h₀B step, Gauss-sum
-  evaluation, harmonic bound). Standard shapes; must re-derive.
-- A4b: §4 bookkeeping: small-prime block count, r_p grouping, Mertens
-  uniformity at endpoints exp(cL^{2/3}), boundary/large-prime ranges.
-- A6: read Tomodovodoo's "closing derivation" (ChatGPT share) — determine
-  what it closes and whether the Overleaf already incorporates it.
-- Statement fidelity vs FormalConjectures/ErdosProblems/730.lean.
+- ~~A4a: Lemma 3.2 line-by-line~~ DONE — re-derived in full (VERDICT.md,
+  "What was checked" items 4–5).
+- ~~A4b: §4 bookkeeping~~ DONE — small primes, main range, boundary and
+  large primes all checked (VERDICT.md items 6–8).
+- ~~A6: Tomodovodoo's "closing derivation"~~ DONE — it is provenance
+  analysis, not a mathematical patch; its algebra agrees with ours
+  (VERDICT.md item 2).
+- ~~Statement fidelity vs FormalConjectures/ErdosProblems/730.lean~~
+  DONE — the formal statement is implied by the paper's theorem
+  (VERDICT.md item 11).
 
-## Honest current posture
+## Final posture (end of 2026-07-27)
 
-No error found anywhere; every claim that CAN be checked by computation
-or short hand-derivation has been checked and holds, including several
+No error found anywhere. The analytic sections (§3–§4) were re-derived in
+full, and every finitely checkable claim holds — including several
 (residue table, constants, OEIS agreement, 49% empirical density) that
-would have exposed a hollow proof instantly. The remaining risk is
-concentrated in ~2 pages of standard-shape analytic argument (§3–§4).
-Preliminary posture: leaning CONFIRM, verdict pending A4/A6.
+would have exposed a hollow proof instantly. **Verdict: CONFIRMED** — see
+VERDICT.md for the complete report and its caveats (human verification
+with machine assistance; not an end-to-end Lean proof).

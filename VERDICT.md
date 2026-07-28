@@ -80,7 +80,9 @@ density ≥ 1 − Λ ≈ 0.0430 (empirically ≈ 49%).
    thread (crediting Liam Price / GPT-5.5 Pro's paper, and Tomodovodoo's
    provenance note).
 2. Update the AI-contributions wiki row for 730: ⚪ → ✅ (verified).
-3. Offer the new pairs to OEIS A129515 (b-file extension).
+3. Offer the new pairs to OEIS A129515 — as a comment + link, not a
+   b-file extension: the gap below our terms is not exhaustively searched,
+   so inserting them would corrupt the sequence (see OEIS_DRAFT.md).
 4. Optional: formalize Lemma 2.1 in Lean (the criterion is
    finite-combinatorial and would make the pairs machine-checkable
    end-to-end).
