@@ -165,9 +165,20 @@ ANALYTIC method — its per-prime local analysis is exactly Prop 3.3
 for irreducible G!), with the global bookkeeping now over prime divisors
 of an irreducible quadratic's values (Chebotarev-flavored densities in
 place of linear-form Mertens). Concrete next steps:
-1. Parametrize 3-squares-in-AP triples (v² − u² = w² − v² = 2α) and
-   enumerate small (α, D₀) with the F/2F−1/2F+1 split + integrality of
-   (β, γ) + the 730 local/coprimality conditions.
+1. ~~Parametrize 3-squares-in-AP triples~~ DONE, and it is clean:
+   writing the three discriminant squares as s₂² , e², s₁² (gaps 2α),
+   the system s₁²+s₂² = 2e² is solved by s₁ = m+n, s₂ = m−n with
+   m² + n² = e² — **Pythagorean triples** — and then α = mn. The
+   smallest triple (3,4,5) yields the first concrete hybrid family:
+       n+1  = (3t+1)(4t+3)
+       2n+1 = (4t+1)(6t+5)
+       2n+3 = (2t+1)(12t+7)
+       n+2  = 12t² + 13t + 4   (disc = −23 < 0: irreducible, positive)
+   with all six forms odd for even t. EMPIRICS (t ≤ 4000, even):
+   first-transition success 146/2000 = 7.3% (≈7× ambient k=1 density);
+   ONE FULL TRIPLE already at t = 2490, n = 74,433,572 — family triple
+   rate ≈ 5×10⁻⁴ per member ≈ 8× ambient, with the n+2 branch entirely
+   unengineered. The construction manufactures triples.
 2. For surviving families, develop the first-moment count with the
    fourth branch quadratic irreducible: the new ingredient is
    Σ_p (obstruction density at p) over p | values of an irreducible
