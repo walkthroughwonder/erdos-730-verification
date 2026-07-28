@@ -128,6 +128,31 @@ toolchain applies).
   The k-fold simultaneous version of the 730 construction is the
   plausible proof route for fixed small k.
 
+## Lemma C (four-squares obstruction for naive triple constructions)
+
+Seek a 730-style family for TRIPLES: one quadratic F(t) = n+1 with
+F = P₁Q₁, 2F−1 = R₁S₁, F+1 = P₂Q₂, 2F+1 = R₂S₂, all factors linear in t.
+A quadratic with integer coefficients splits into rational linear forms
+iff its discriminant is a perfect square. With F = αt² + βt + γ and
+D₀ = β² − 4αγ, the four discriminant conditions are (up to the uniform
+factor 4 on the doubled ones):
+  disc(F) → D₀,   disc(2F−1) → D₀ + 2α,
+  disc(F+1) → D₀ − 4α,   disc(2F+1) → D₀ − 2α.
+These are FOUR SQUARES IN ARITHMETIC PROGRESSION (common difference 2α),
+impossible for α ≠ 0 by Euler–Fermat. **Hence no constant-free
+linear-splitting family can produce triples.**
+
+Escape hatch (and the reason the k=1 proof needed its 3): constant
+multipliers. With 2F−1 = h₂R₁S₁ etc., the conditions become
+D₀−4α = h₃²·□, D₀−2α = h₄²·□, D₀ = h₁²·□, D₀+2α = h₂²·□ — an AP of
+length 4 whose terms are squares times DIFFERENT fixed constants; no
+classical obstruction applies. The correct identity search is therefore:
+over small constant tuples (h₁,h₂,h₃,h₄) (odd, digit-side-safe), find
+integers (α, D₀) with all four conditions, then reconstruct β, γ and the
+eight linear forms, then impose the 730-style local conditions. This is
+Pell-system territory — finite, automatable, and now provably the ONLY
+route of this shape.
+
 ## Honest difficulty assessment
 
 k = 2 via triples looks GENUINELY ATTACKABLE (one known example; the 730
