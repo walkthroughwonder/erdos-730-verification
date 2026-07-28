@@ -176,7 +176,7 @@ place of linear-form Mertens). Concrete next steps:
        n+2  = 12t² + 13t + 4   (disc = −23 < 0: irreducible, positive)
    with all six forms odd for even t. EMPIRICS (t ≤ 4000, even):
    first-transition success 146/2000 = 7.3% (≈7× ambient k=1 density);
-   ONE FULL TRIPLE already at t = 2490, n = 74,433,572 — family triple
+   ONE FULL TRIPLE already at t = 2490, n = 74,433,572 (brute-force confirmed: full support comparison over all odd primes to 2(n+2)) — family triple
    rate ≈ 5×10⁻⁴ per member ≈ 8× ambient, with the n+2 branch entirely
    unengineered. The construction manufactures triples.
 2. For surviving families, develop the first-moment count with the
